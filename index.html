@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Plumber Runs 4 AI Agents. Let Him Build Yours.</title>
+<meta name="description" content="Nate Johnson runs 4 AI agents for his plumbing business using OpenClaw (160K+ GitHub stars). Now he builds AI systems for other businesses. Book a free call.">
+
+<!-- Open Graph / Social -->
+<meta property="og:title" content="A Plumber Runs 4 AI Agents. Let Him Build Yours.">
+<meta property="og:description" content="I run 4 AI agents for my plumbing business. They handle scheduling, research, memory, and ops while I'm under someone's sink. I'll build one for your business.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://openclawadvisor.com">
+<meta property="og:site_name" content="OpenClaw Advisor">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A Plumber Runs 4 AI Agents. Let Him Build Yours.">
+<meta name="twitter:description" content="4 AI agents. 40+ decisions/day. $250/month. Running a plumbing business in Boston.">
+<meta name="twitter:creator" content="@natebuildsai">
+<link rel="canonical" href="https://openclawadvisor.com">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #030712;
+  --surface: #0f172a;
+  --border: #1e293b;
+  --text: #cbd5e1;
+  --text-dim: #64748b;
+  --text-bright: #f1f5f9;
+  --blue: #3b82f6;
+  --blue-glow: rgba(59, 130, 246, 0.4);
+  --green: #22c55e;
+  --purple: #a855f7;
+  --amber: #f59e0b;
+}
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Animated Background ── */
+.bg-glow {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+.bg-glow .orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.15;
+  animation: float 20s ease-in-out infinite;
+}
+.bg-glow .orb-1 {
+  width: 600px; height: 600px;
+  background: var(--blue);
+  top: -200px; left: -100px;
+  animation-delay: 0s;
+}
+.bg-glow .orb-2 {
+  width: 500px; height: 500px;
+  background: var(--purple);
+  bottom: -150px; right: -100px;
+  animation-delay: -7s;
+}
+.bg-glow .orb-3 {
+  width: 400px; height: 400px;
+  background: var(--green);
+  top: 40%; left: 60%;
+  animation-delay: -14s;
+  opacity: 0.08;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(30px, -40px) scale(1.05); }
+  50% { transform: translate(-20px, 20px) scale(0.95); }
+  75% { transform: translate(40px, 30px) scale(1.02); }
+}
+
+/* ── Main Content ── */
+.landing {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 60px 24px;
+  text-align: center;
+}
+
+/* ── Eyebrow ── */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  color: var(--blue);
+  padding: 8px 20px;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 32px;
+  animation: fadeInUp 0.8s ease both;
+}
+.eyebrow .pulse {
+  width: 8px; height: 8px;
+  background: var(--green);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+
+/* ── Headline ── */
+h1 {
+  font-size: clamp(2.5rem, 7vw, 4rem);
+  font-weight: 900;
+  color: var(--text-bright);
+  line-height: 1.1;
+  margin-bottom: 24px;
+  letter-spacing: -0.02em;
+  animation: fadeInUp 0.8s ease 0.1s both;
+}
+h1 .highlight {
+  background: linear-gradient(135deg, var(--blue), var(--purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Subhead ── */
+.subhead {
+  font-size: clamp(1.1rem, 3vw, 1.35rem);
+  color: var(--text-dim);
+  max-width: 520px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+  animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+/* ── Stats ── */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.8s ease 0.3s both;
+}
+.stat {
+  text-align: center;
+}
+.stat .number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-bright);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.stat .number .unit { font-size: 1rem; color: var(--text-dim); font-weight: 500; }
+.stat .label {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.stat-divider {
+  width: 1px;
+  background: var(--border);
+  align-self: stretch;
+}
+
+/* ── Agent Cards ── */
+.agents {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-bottom: 48px;
+  animation: fadeInUp 0.8s ease 0.4s both;
+}
+.agent {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: left;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.agent:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+  transform: translateY(-2px);
+}
+.agent .icon { font-size: 1.25rem; margin-bottom: 6px; }
+.agent .name {
+  font-size: 0.85rem; font-weight: 700; color: var(--text-bright);
+  margin-bottom: 2px;
+}
+.agent .role {
+  font-size: 0.75rem; color: var(--text-dim);
+}
+
+@media (max-width: 480px) {
+  .agents { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .agent { padding: 12px; }
+}
+
+/* ── CTA Button ── */
+.cta-wrapper {
+  animation: fadeInUp 0.8s ease 0.5s both;
+  margin-bottom: 32px;
+}
+.cta-btn {
+  display: inline-block;
+  background: var(--blue);
+  color: white;
+  padding: 20px 48px;
+  border-radius: 16px;
+  font-weight: 800;
+  font-size: 1.15rem;
+  text-decoration: none;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 40px var(--blue-glow);
+}
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 60px var(--blue-glow);
+  color: white;
+}
+.cta-btn::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255,255,255,0.08) 50%,
+    transparent 70%
+  );
+  animation: shimmer 3s ease-in-out infinite;
+}
+@keyframes shimmer {
+  0% { transform: translateX(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) rotate(45deg); }
+}
+
+.cta-sub {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  margin-top: 12px;
+  animation: fadeInUp 0.8s ease 0.6s both;
+}
+
+/* ── Social Proof Bar ── */
+.proof {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+  animation: fadeInUp 0.8s ease 0.7s both;
+}
+.proof-item {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.proof-item .dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+}
+
+/* ── Footer ── */
+.footer {
+  margin-top: 48px;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  animation: fadeInUp 0.8s ease 0.8s both;
+}
+.footer a { color: var(--text-dim); }
+.footer a:hover { color: var(--text); }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .landing { padding: 40px 20px; }
+  .stats { gap: 20px; }
+  .stat .number { font-size: 1.5rem; }
+  .cta-btn { padding: 18px 36px; font-size: 1.05rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- Animated BG -->
+<div class="bg-glow">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</div>
+
+<main class="landing">
+
+  <div class="eyebrow">
+    <span class="pulse"></span>
+    4 AI Agents Running Right Now
+  </div>
+
+  <h1>A Plumber Runs <span class="highlight">4 AI Agents.</span><br>Let Him Build Yours.</h1>
+
+  <p class="subhead">I'm Nate Johnson. My AI agents handle scheduling, research, memory, and operations for my plumbing business — while I'm under someone's sink. Now I build them for other businesses.</p>
+
+  <!-- Stats -->
+  <div class="stats">
+    <div class="stat">
+      <span class="number">4</span>
+      <span class="label">AI Agents</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="number">40+</span>
+      <span class="label">Decisions / Day</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="number">$250<span class="unit">/mo</span></span>
+      <span class="label">Total Cost</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="number">160K+</span>
+      <span class="label">GitHub Stars</span>
+    </div>
+  </div>
+
+  <!-- Agent Cards -->
+  <div class="agents">
+    <div class="agent">
+      <div class="icon">⚡</div>
+      <div class="name">ZEKE</div>
+      <div class="role">Operator — comms, scheduling, daily ops</div>
+    </div>
+    <div class="agent">
+      <div class="icon">🔍</div>
+      <div class="name">Huginn</div>
+      <div class="role">Researcher — deep dives on demand</div>
+    </div>
+    <div class="agent">
+      <div class="icon">🧠</div>
+      <div class="name">Muninn</div>
+      <div class="role">Memory — nothing gets forgotten</div>
+    </div>
+    <div class="agent">
+      <div class="icon">🏗️</div>
+      <div class="name">Odin</div>
+      <div class="role">Architect — strategy &amp; planning</div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-wrapper">
+    <a href="https://calendly.com/openclawadvisors/discovery" class="cta-btn">Book a Free Discovery Call →</a>
+  </div>
+  <p class="cta-sub">30 minutes. No pitch. Just a conversation about what AI could do for your business.</p>
+
+  <!-- Social Proof -->
+  <div class="proof">
+    <div class="proof-item">
+      <span class="dot"></span>
+      Built on OpenClaw (open source)
+    </div>
+    <div class="proof-item">
+      <span class="dot"></span>
+      Self-hosted — your data stays yours
+    </div>
+    <div class="proof-item">
+      <span class="dot"></span>
+      From $500 setup
+    </div>
+  </div>
+
+  <div class="footer">
+    <a href="https://openclawadvisors.com">openclawadvisors.com</a> · <a href="https://openclawadvice.com">guides &amp; tutorials</a> · <a href="https://twitter.com/natebuildsai">@natebuildsai</a>
+    <br>© 2026 Nate Johnson
+  </div>
+
+</main>
+
+</body>
+</html>
