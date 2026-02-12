@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Prompt Injection on OpenClaw Advisors</title>
+    <link>https://openclawadvisors.com/tags/prompt-injection/</link>
+    <description>Recent content in Prompt Injection on OpenClaw Advisors</description>
+    <image>
+      <title>OpenClaw Advisors</title>
+      <url>https://openclawadvisors.com/images/site-og.png</url>
+      <link>https://openclawadvisors.com/images/site-og.png</link>
+    </image>
+    <generator>Hugo -- 0.147.4</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 12 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://openclawadvisors.com/tags/prompt-injection/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AI-to-AI Infection: The Security Threat Nobody&#39;s Talking About</title>
+      <link>https://openclawadvisors.com/blog/ai-agent-infection-risks/</link>
+      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://openclawadvisors.com/blog/ai-agent-infection-risks/</guid>
+      <description>AI agents interacting with other AI systems can get infected with prompt injections, leak secrets, or execute malicious code. This is the next frontier of cybersecurity — and most OpenClaw users aren&amp;#39;t prepared.</description>
+    </item>
+  </channel>
+</rss>
