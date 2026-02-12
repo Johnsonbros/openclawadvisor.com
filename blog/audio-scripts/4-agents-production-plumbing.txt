@@ -1,0 +1,57 @@
+I own Johnson Bros Plumbing in Boston. We're not a tech company — we fix water heaters, unclog drains, install toilets. But for the past eighteen months, we've been running a four-agent AI system built on OpenClaw that handles scheduling, customer communications, research, and daily operations. And this isn't a demo or a side project. This is production. Real customers, real money, real stakes.
+
+A security breach could literally kill my business. So we had to get security right from day one. This is the full story — why we built it, how it works, what we learned, and how we hardened it.
+
+First, some production stats. We have four AI agents running around the clock. Eighteen months in production now. They make over fifty automated decisions per day. Zero security incidents. And ninety-nine point seven percent uptime.
+
+So why did we build this in the first place? In twenty twenty-four I hit a wall. My plumbing business was growing, but I couldn't keep up. I was drowning in customer calls and texts at all hours. Scheduling conflicts and double bookings. Research questions like "what's the best tankless water heater for a three bathroom house?" And endless administrative work — invoices, follow-ups, ordering parts.
+
+The obvious answer was to hire more people. But that's expensive, hard to manage, and honestly, I'd still be the bottleneck for most decisions.
+
+Then OpenClaw hit my Twitter feed. An AI assistant that could actually do things — not just answer questions. It could send messages, search the web, run scripts, integrate with other tools. I thought, what if I could automate the coordination layer of my business? So I built it. And it worked. Too well, actually — which is when I realized just how insecure it was.
+
+Let me introduce you to our four agents.
+
+First up is ZEKE, the main operator. ZEKE handles communications, scheduling, and daily operations. He manages incoming customer messages on Telegram and SMS, triages requests and routes them to the right agent, manages my calendar and schedules appointments, coordinates with the other three agents, and makes real-time decisions on pricing and availability. What makes ZEKE special is that he has approval authority for routine decisions — booking standard jobs, sending quotes — but he escalates edge cases to me. This balance keeps me in control without making me a bottleneck.
+
+Next is Huginn, the research raven. Huginn does deep research and analysis. He researches product specifications and vendor options, analyzes customer problems and recommends solutions, investigates new technologies and techniques, and compiles reports for me to review. Plumbing technology changes fast, and Huginn keeps me current without requiring me to read manuals at midnight.
+
+Then there's Muninn, the memory raven. Muninn handles documentation and knowledge management. He maintains our knowledge base of past jobs, documents lessons learned and best practices, tracks vendor relationships and parts inventory, and searches historical data to answer questions. We've been in business forty years. The tribal knowledge in my head is worth millions. Muninn captures it before I forget.
+
+And finally, Oden — architecture and planning. Oden handles complex problem-solving and system design. He takes on multi-step projects requiring coordination, designs solutions for unusual problems, plans workflow improvements, and architects new automations. Some problems don't fit templates. Oden breaks them down into manageable pieces.
+
+Now let's talk architecture. Our system runs on a dedicated Ubuntu server from Hetzner for about forty bucks a month. We've got the OpenClaw Gateway as the main process, Docker containers for each agent to keep them isolated, PostgreSQL for conversation history and our knowledge base, Redis for the job queue and caching, Nginx as a reverse proxy with SSL, and HashiCorp Vault for secret management.
+
+For communication channels, I use Telegram as my primary interface with the system. Customers reach us via SMS through Twilio. We have voice calls set up for urgent customer requests. And email handles vendor communications.
+
+Security is layered. Each agent runs in its own Docker container for isolation. We have filesystem restrictions — read-only mounts except for specific directories. Network segmentation means agents can't access each other directly. Tool permissions are strictly whitelisted — only approved commands allowed. Approval workflows kick in for high-risk actions that require my confirmation. Secret rotation happens every ninety days. And monitoring and alerts trigger notifications if anything unusual happens.
+
+Now, the security lessons we learned the hard way.
+
+Lesson one: default OpenClaw is not production ready. When I first deployed, I ran OpenClaw with default settings. Within a week I realized WebSocket ports were exposed to the internet, agents had unlimited filesystem access, API keys were in plain text config files, and there was no audit logging of agent actions. This was terrifying. We were one prompt injection attack away from disaster.
+
+Lesson two: container isolation is non-negotiable. Running all four agents in one process meant a compromised agent could access everything. Docker containers with strict mounts solved this. Each agent now only sees its own conversation history, approved tool directories, and a shared read-only knowledge base.
+
+Lesson three: tool permissions must be explicit. OpenClaw's exec tool can run any shell command by default. We locked it down with a whitelist of allowed commands — grep, curl, specific scripts only. No shell access, just direct execution. Input sanitization blocks injection attempts. And we log all executions.
+
+Lesson four: human in the loop for high stakes. We implemented approval workflows for scheduling new customers in case of spam or fraud, spending over five hundred dollars on expensive parts, system changes that modify automations, and unusual requests — anything that doesn't fit established patterns. This keeps me in control while automating ninety percent of routine work.
+
+So what does this system actually handle? Daily operations that are fully automated include responding to customer inquiries, scheduling service calls, sending quotes for standard jobs, following up on completed work, ordering routine parts, and updating our knowledge base.
+
+Weekly operations are semi-automated. I review agent decisions for quality, approve unusual requests, plan complex projects, and handle vendor negotiations.
+
+And what do I still do myself? Final decisions on new customers. Complex problem diagnosis. On-site service work. Strategic business planning. And anything involving judgment calls I'm not comfortable delegating.
+
+The results speak for themselves. I'm saving fifteen to twenty hours per week on administrative work. Our average response time dropped from two hours to four minutes. Customer satisfaction is up thirty-four percent thanks to faster, more consistent responses. Revenue impact? Up twenty-two percent because we can handle more jobs with the same team size. And my stress level is way down. The agents don't sleep. I do.
+
+Let's talk costs. Infrastructure runs forty dollars a month for the Hetzner server. API costs for Claude run about one hundred twenty to one hundred eighty dollars per month. Development time was around two hundred hours for the initial build, and now about five hours a month for maintenance. Total monthly cost? About two hundred twenty dollars. Compare that to hiring an admin assistant for three thousand dollars or more. The return on investment? It paid for itself in the first month.
+
+I get a lot of questions about this system. What if the AI makes a mistake? Approval workflows prevent catastrophic errors. For routine tasks, we have error budgets. An occasional misscheduled appointment is worth the time saved.
+
+Do customers know they're talking to AI? Yes. Our initial message says "This is ZEKE, Nate's AI assistant. I handle scheduling and basic questions. Complex issues go directly to Nate." Customer feedback? They don't care as long as they get good service.
+
+What about that vulnerability, CVE twenty twenty-six dash twenty-five thousand two hundred fifty-three? We were unaffected because our WebSocket ports weren't exposed to the internet. But it was a wake-up call to stay current on security patches.
+
+Would this work for other service businesses? Absolutely. HVAC, electrical, landscaping, cleaning — any business with similar coordination challenges could benefit.
+
+If you want to build something similar, we offer consulting to help service businesses deploy secure AI agent systems. Not a generic chatbot — a real production system tailored to your operations.
