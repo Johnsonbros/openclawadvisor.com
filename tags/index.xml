@@ -11,8 +11,71 @@
     </image>
     <generator>Hugo -- 0.147.4</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://openclawadvisors.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ai-Agents</title>
+      <link>https://openclawadvisors.com/tags/ai-agents/</link>
+      <pubDate>Tue, 17 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://openclawadvisors.com/tags/ai-agents/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Clawhub</title>
+      <link>https://openclawadvisors.com/tags/clawhub/</link>
+      <pubDate>Tue, 17 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://openclawadvisors.com/tags/clawhub/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Foundation</title>
+      <link>https://openclawadvisors.com/tags/foundation/</link>
+      <pubDate>Tue, 17 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://openclawadvisors.com/tags/foundation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Malware</title>
+      <link>https://openclawadvisors.com/tags/malware/</link>
+      <pubDate>Tue, 17 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://openclawadvisors.com/tags/malware/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Openai</title>
+      <link>https://openclawadvisors.com/tags/openai/</link>
+      <pubDate>Tue, 17 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://openclawadvisors.com/tags/openai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Openclaw</title>
+      <link>https://openclawadvisors.com/tags/openclaw/</link>
+      <pubDate>Tue, 17 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://openclawadvisors.com/tags/openclaw/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Peter-Steinberger</title>
+      <link>https://openclawadvisors.com/tags/peter-steinberger/</link>
+      <pubDate>Tue, 17 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://openclawadvisors.com/tags/peter-steinberger/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>https://openclawadvisors.com/tags/security/</link>
+      <pubDate>Tue, 17 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://openclawadvisors.com/tags/security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Supply-Chain</title>
+      <link>https://openclawadvisors.com/tags/supply-chain/</link>
+      <pubDate>Tue, 17 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://openclawadvisors.com/tags/supply-chain/</guid>
+      <description></description>
+    </item>
     <item>
       <title>AI-to-AI</title>
       <link>https://openclawadvisors.com/tags/ai-to-ai/</link>
@@ -119,13 +182,6 @@
       <description></description>
     </item>
     <item>
-      <title>Openclaw</title>
-      <link>https://openclawadvisors.com/tags/openclaw/</link>
-      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://openclawadvisors.com/tags/openclaw/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Picoclaw</title>
       <link>https://openclawadvisors.com/tags/picoclaw/</link>
       <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
@@ -151,13 +207,6 @@
       <link>https://openclawadvisors.com/tags/prompt-injection/</link>
       <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
       <guid>https://openclawadvisors.com/tags/prompt-injection/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Security</title>
-      <link>https://openclawadvisors.com/tags/security/</link>
-      <pubDate>Thu, 12 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://openclawadvisors.com/tags/security/</guid>
       <description></description>
     </item>
     <item>

@@ -2,6 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://openclawadvisors.com/blog/clawhub-security-malicious-skills/</loc>
+    <lastmod>2026-02-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://openclawadvisors.com/tags/ai-agents/</loc>
+    <lastmod>2026-02-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://openclawadvisors.com/categories/analysis/</loc>
+    <lastmod>2026-02-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://openclawadvisors.com/blog/</loc>
+    <lastmod>2026-02-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://openclawadvisors.com/categories/</loc>
+    <lastmod>2026-02-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://openclawadvisors.com/tags/clawhub/</loc>
+    <lastmod>2026-02-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://openclawadvisors.com/tags/foundation/</loc>
+    <lastmod>2026-02-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://openclawadvisors.com/tags/malware/</loc>
+    <lastmod>2026-02-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://openclawadvisors.com/tags/openai/</loc>
+    <lastmod>2026-02-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://openclawadvisors.com/tags/openclaw/</loc>
+    <lastmod>2026-02-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://openclawadvisors.com/</loc>
+    <lastmod>2026-02-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://openclawadvisors.com/blog/openclaw-joins-openai/</loc>
+    <lastmod>2026-02-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://openclawadvisors.com/tags/peter-steinberger/</loc>
+    <lastmod>2026-02-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://openclawadvisors.com/categories/security/</loc>
+    <lastmod>2026-02-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://openclawadvisors.com/tags/security/</loc>
+    <lastmod>2026-02-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://openclawadvisors.com/tags/supply-chain/</loc>
+    <lastmod>2026-02-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://openclawadvisors.com/tags/</loc>
+    <lastmod>2026-02-17T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://openclawadvisors.com/blog/what-openclaw-power-users-know/</loc>
     <lastmod>2026-02-12T00:00:00+00:00</lastmod>
   </url><url>
@@ -23,9 +74,6 @@
     <loc>https://openclawadvisors.com/tags/best-practices/</loc>
     <lastmod>2026-02-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://openclawadvisors.com/blog/</loc>
-    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://openclawadvisors.com/tags/business/</loc>
     <lastmod>2026-02-12T00:00:00+00:00</lastmod>
   </url><url>
@@ -33,9 +81,6 @@
     <lastmod>2026-02-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://openclawadvisors.com/tags/case-study/</loc>
-    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://openclawadvisors.com/categories/</loc>
     <lastmod>2026-02-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://openclawadvisors.com/categories/comparison/</loc>
@@ -74,12 +119,6 @@
     <loc>https://openclawadvisors.com/tags/nanoclaw/</loc>
     <lastmod>2026-02-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://openclawadvisors.com/tags/openclaw/</loc>
-    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://openclawadvisors.com/</loc>
-    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://openclawadvisors.com/blog/openclaw-vs-nanoclaw/</loc>
     <lastmod>2026-02-12T00:00:00+00:00</lastmod>
   </url><url>
@@ -96,15 +135,6 @@
     <lastmod>2026-02-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://openclawadvisors.com/tags/prompt-injection/</loc>
-    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://openclawadvisors.com/categories/security/</loc>
-    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://openclawadvisors.com/tags/security/</loc>
-    <lastmod>2026-02-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://openclawadvisors.com/tags/</loc>
     <lastmod>2026-02-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://openclawadvisors.com/categories/technology/</loc>
